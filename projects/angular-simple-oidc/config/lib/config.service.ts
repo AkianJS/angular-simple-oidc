@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { RequiredConfigurationMissingError, NullConfigurationProvidedError } from './errors';
-import { ReplaySubject } from 'rxjs';
+import { ReplaySubject } from 'rxjs'; 
 import { EventsService, SimpleOidcInfoEvent } from 'angular-simple-oidc/events';
 
 export interface ConfigServiceOptions<T> {
@@ -9,7 +9,7 @@ export interface ConfigServiceOptions<T> {
 }
 
 @Injectable()
-export class ConfigService<T> {
+export class ConfigService<T extends object> {
 
   public get current$() {
     return this.configSubject.asObservable();

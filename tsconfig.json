@@ -10,7 +10,7 @@
     "module": "es2020",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2020",
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -20,15 +20,13 @@
     ],
     "paths": {
       "angular-simple-oidc": [
-        // "./projects/angular-simple-oidc/src/public-api"
         "dist/angular-simple-oidc"
       ],
       "angular-simple-oidc/*": [
-        // "./projects/angular-simple-oidc/src/*"
-        // "./projects/angular-simple-oic/src/*"
         "dist/angular-simple-oidc/*"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
