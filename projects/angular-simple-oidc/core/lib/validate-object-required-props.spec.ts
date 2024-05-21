@@ -4,7 +4,7 @@ import { RequiredParemetersMissingError } from './errors';
 describe('validateObjectRequiredProps', () => {
 
   it('throw when parameters are missing', () => {
-    // tslint:disable-next-line: interface-over-type-literal
+    // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
     type foo = {
       a: number;
     };
@@ -16,7 +16,7 @@ describe('validateObjectRequiredProps', () => {
   });
 
   it('not throw when parameters are ok', () => {
-    // tslint:disable-next-line: interface-over-type-literal
+    // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
     type foo = {
       a: number;
     };

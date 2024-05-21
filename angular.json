@@ -140,6 +140,15 @@
             "tsConfig": "projects/angular-simple-oidc/tsconfig.spec.json",
             "karmaConfig": "projects/angular-simple-oidc/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/angular-simple-oidc/**/*.ts",
+              "projects/angular-simple-oidc/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -158,8 +167,7 @@
         "@schematics/angular:guard": {
           "skipTests": true
         },
-        "@schematics/angular:module": {
-        },
+        "@schematics/angular:module": {},
         "@schematics/angular:pipe": {
           "skipTests": true
         },
@@ -276,6 +284,7 @@
   "cli": {
     "analytics": false,
     "schematicCollections": [
+      "@angular-eslint/schematics",
       "@ngrx/schematics"
     ]
   }

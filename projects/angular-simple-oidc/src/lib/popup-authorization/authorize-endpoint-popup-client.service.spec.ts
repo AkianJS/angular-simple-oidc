@@ -104,7 +104,7 @@ describe('Authorize Endpoint Popup Client ', () => {
         const docSpyObj = jasmine.createSpyObj<Document>('document', ['createElement']);
         const docSpy = spyOnGet(TestBed.get(WINDOW_REF) as Window, 'document');
         docSpy.and.returnValue(docSpyObj);
-        // tslint:disable-next-line: deprecation
+        // eslint-disable-next-line import/no-deprecated
         docSpyObj.createElement.and.returnValue(jasmine.createSpyObj<HTMLIFrameElement>('Iframe', ['contentWindow']));
 
         windowSpy.addEventListener.and.callFake((name: string, handler: EventListenerOrEventListenerObject) => {

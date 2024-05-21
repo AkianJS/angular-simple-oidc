@@ -123,7 +123,7 @@ describe('TokenHelperService', () => {
         });
 
         it('returns payload if token is correct', () => {
-            // tslint:disable-next-line:max-line-length
+            // eslint-disable-next-line max-len
             const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwibmFtZSI6IkpvaG4gRF83NDc377-977-9MDEiLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNTE2MjI0MjQyfQ.RqIi_sO2g592anknIvfks4p7kPy8mOcN0YZUHz-8pFw';
             const jsonString = `{ "admin": true, "sub": "1", "iat": 1516224242 }`;
             const expected = JSON.parse(jsonString);

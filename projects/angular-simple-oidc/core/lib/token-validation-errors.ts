@@ -95,7 +95,7 @@ export class IssuedAtValidationFailedError extends TokenValidationError {
 export class IssuerValidationFailedError extends TokenValidationError {
     constructor(identityTokenIssuer: string, discoveryIssuer: string, context: any) {
         super(
-            // tslint:disable-next-line: max-line-length
+            // eslint-disable-next-line max-len
             `Issuer (iss) validation failed. Identity Token's iss (${identityTokenIssuer}) does not match discovery document's issuer (${discoveryIssuer})`,
             `iss-validation-failed`,
             context
@@ -106,7 +106,7 @@ export class IssuerValidationFailedError extends TokenValidationError {
 export class AudienceValidationFailedError extends TokenValidationError {
     constructor(identityTokenAud: string, clientId: string, context: any) {
         super(
-            // tslint:disable-next-line: max-line-length
+            // eslint-disable-next-line max-len
             `Audience (aud) validation failed. Identity Token's aud (${identityTokenAud}) does not include this client's ID (${clientId}). The token may not intended for this client.`,
             `aud-validation-failed`,
             context

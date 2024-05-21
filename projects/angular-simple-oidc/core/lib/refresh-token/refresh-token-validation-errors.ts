@@ -4,7 +4,7 @@ import { TokenValidationError } from '../token-validation-errors';
 export class IssuerValidationError extends TokenValidationError {
     constructor(originalIssuer: string, newIssuer: string, context: any) {
         super(
-            // tslint:disable-next-line: max-line-length
+            // eslint-disable-next-line max-len
             `Issuer (iss) validation failed. Original Identity Token's iss (${originalIssuer}) does not match new token's issuer (${newIssuer})`,
             `iss-validation-failed-refresh`,
             context
@@ -15,7 +15,7 @@ export class IssuerValidationError extends TokenValidationError {
 export class SubjectValidationError extends TokenValidationError {
     constructor(originalSubject: string, newSubject: string, context: any) {
         super(
-            // tslint:disable-next-line: max-line-length
+            // eslint-disable-next-line max-len
             `Subject (sub) validation failed. Original Identity Token's sub (${originalSubject}) does not match new token's sub (${newSubject})`,
             `sub-validation-failed-refresh`,
             context
