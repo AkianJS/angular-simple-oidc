@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { map, take, switchMap } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { AuthService } from '../auth.service';
 import { EventsService, SimpleOidcInfoEvent } from 'angular-simple-oidc/events';
 
 @Injectable()
-export class AuthGuard implements CanActivate {
+export class AuthGuard  {
 
   constructor(
     protected readonly auth: AuthService,
