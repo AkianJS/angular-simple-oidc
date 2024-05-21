@@ -35,7 +35,7 @@ export class SessionCheckService implements OnDestroy {
     ) { }
 
     public ngOnDestroy() {
-        this.destroyedSubject.next();
+        this.destroyedSubject.next(0);
         this.destroyedSubject.complete();
     }
 

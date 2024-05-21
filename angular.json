@@ -70,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-simple-oidc-sample:build"
+            "buildTarget": "angular-simple-oidc-sample:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-simple-oidc-sample:build:production"
+              "buildTarget": "angular-simple-oidc-sample:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-simple-oidc-sample:build"
+            "buildTarget": "angular-simple-oidc-sample:build"
           }
         },
         "test": {
@@ -235,18 +235,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "custom-config:build"
+            "buildTarget": "custom-config:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "custom-config:build:production"
+              "buildTarget": "custom-config:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "custom-config:build"
+            "buildTarget": "custom-config:build"
           }
         },
         "test": {

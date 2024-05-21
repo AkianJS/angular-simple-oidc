@@ -120,7 +120,7 @@ describe('OidcCodeFlowClientService', () => {
         codeFlowClient = TestBed.get(OidcCodeFlowClient);
 
         const configSpy = spyOnGet(TestBed.get(AUTH_CONFIG_SERVICE) as ConfigService<AuthConfig>, 'current$');
-        configSpy.and.returnValue(of(config));
+        configSpy.and.returnValue(of(config as AuthConfig));
 
         windowLocationSpy = spyOnGet(TestBed.get(WINDOW_REF) as Window, 'location');
         windowLocationSpy.and.returnValue({ href: config.baseUrl });

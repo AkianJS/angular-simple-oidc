@@ -95,7 +95,7 @@ describe('RefrshTokenClientService', () => {
         });
 
         const configSpy = spyOnGet(TestBed.get(AUTH_CONFIG_SERVICE) as ConfigService<AuthConfig>, 'current$');
-        configSpy.and.returnValue(of(config));
+        configSpy.and.returnValue(of(config as AuthConfig));
 
         stateSpy = spyOnGet(TestBed.get(TokenStorageService) as TokenStorageService, 'currentState$');
 
